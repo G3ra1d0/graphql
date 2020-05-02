@@ -20,6 +20,11 @@ const typeDefs = gql`
 `;
 
 const resolvers = {
+  Usuario: {
+    salario(usuario) {
+      return usuario.salario_real;
+    },
+  },
   Query: {
     ola() {
       return "Hello Word!";
@@ -33,8 +38,8 @@ const resolvers = {
         nome: "Beatriz",
         email: "beatriz123@gmail.com",
         idade: 22,
-        salario: 1045.5,
-        vip: true
+        salario_real: 1045.5,
+        vip: true,
       };
     },
   },
