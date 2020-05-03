@@ -22,4 +22,9 @@ module.exports = {
       return doc;
     });
   },
+  usuario(_, { id }) {
+    return Usuario.findById(id).then((doc) => {
+      return doc;
+    });
+  },
 };
