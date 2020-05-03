@@ -1,0 +1,7 @@
+input UsuarioInput {
+  nome: String
+  email: String
+  idade: Int
+  salario: Float
+  vip: Boolean
+}

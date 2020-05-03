@@ -1,0 +1,13 @@
+type Mutation {
+  novoUsuario(
+    nome: String!
+    email: String!
+    idade: Int
+    salario: Float
+    vip: Boolean
+  ): Usuario
+
+  deleteUsuario(id: ID!): Usuario
+
+  updateUsuario(id: ID!, dados: UsuarioInput!): Usuario
+}

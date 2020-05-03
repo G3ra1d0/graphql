@@ -1,4 +1,4 @@
-const Usuario = require("../models/Usuarios");
+const Usuario = require("../../models/Usuarios");
 
 module.exports = {
   novoUsuario(_, args) {
@@ -11,7 +11,6 @@ module.exports = {
     })
       .save()
       .then((el) => {
-        console.log(el);
         return el;
       });
   },
@@ -32,10 +31,4 @@ module.exports = {
       })
       .catch((err) => null);
   },
-
-  /* nome: String
-  email: String
-  idade: Int
-  salario: Float
-  vip: Boolean */
 };

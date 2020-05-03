@@ -1,9 +1,4 @@
 type Query {
-  ola: String
-  HoraCerta: Date!
-  usuarioLogado: Usuario
-
   usuarios: [Usuario]
   usuario(id: ID!): Usuario
 }
-
