@@ -1,5 +1,5 @@
 module.exports = {
-  salario(usuario) {
-    return usuario.salario_real;
+  id(el) {
+    return el._id;
   },
 };

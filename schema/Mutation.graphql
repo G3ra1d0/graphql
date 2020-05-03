@@ -1,0 +1,9 @@
+type Mutation {
+    novoUsuario(
+        nome: String!
+        email: String!
+        idade: Int
+        salario: Float
+        vip: Boolean
+    ): Usuario
+}
