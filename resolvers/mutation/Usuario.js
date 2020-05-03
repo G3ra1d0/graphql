@@ -15,8 +15,11 @@ module.exports = {
       });
   },
   deleteUsuario(_, { id }) {
-    return Usuario.findByIdAndRemove(id)
-      .then((doc) => doc)
+    return Usuario.findById(id)
+      .then((doc) => {
+        doc.deleteOne();
+        return doc;
+      })
       .catch((err) => null);
   },
   updateUsuario(_, { id, dados }) {
