@@ -6,3 +6,11 @@ type Usuario {
   salario: Float
   vip: Boolean
 }
+
+input UsuarioInput {
+  nome: String
+  email: String
+  idade: Int
+  salario: Float
+  vip: Boolean
+}
