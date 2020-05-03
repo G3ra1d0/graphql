@@ -15,4 +15,9 @@ module.exports = {
         return el;
       });
   },
+  deleteUsuario(_, { id }) {
+    return Usuario.findByIdAndRemove(id)
+      .then((doc) => doc)
+      .catch((err) => null);
+  },
 };

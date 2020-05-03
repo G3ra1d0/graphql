@@ -6,4 +6,8 @@ type Mutation {
         salario: Float
         vip: Boolean
     ): Usuario
+
+    deleteUsuario(
+        id: ID!
+    ): Usuario
 }
