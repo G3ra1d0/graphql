@@ -20,4 +20,22 @@ module.exports = {
       .then((doc) => doc)
       .catch((err) => null);
   },
+  updateUsuario(_, { id, dados }) {
+    return Usuario.findById(id)
+      .then((doc) => {
+        if (dados.nome) doc.nome = dados.nome;
+        if (dados.email) doc.email = dados.email;
+        if (dados.idade) doc.idade = dados.idade;
+        if (dados.salario) doc.salario = dados.salario;
+        if (dados.vip) doc.nome = dados.nome;
+        return doc.save();
+      })
+      .catch((err) => null);
+  },
+
+  /* nome: String
+  email: String
+  idade: Int
+  salario: Float
+  vip: Boolean */
 };

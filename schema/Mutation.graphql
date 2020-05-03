@@ -10,4 +10,9 @@ type Mutation {
     deleteUsuario(
         id: ID!
     ): Usuario
+
+    updateUsuario(
+        id: ID!,
+        dados: UsuarioInput!
+    ): Usuario
 }
