@@ -1,3 +1,5 @@
+const Usuario = require("../models/Usuarios");
+
 module.exports = {
   ola() {
     return "Hello Word!";
@@ -14,5 +16,10 @@ module.exports = {
       salario_real: 1045.5,
       vip: true,
     };
+  },
+  usuarios() {
+    return Usuario.find().then((doc) => {
+      return doc;
+    });
   },
 };
