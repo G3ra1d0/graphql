@@ -1,6 +1,7 @@
 scalar Date
 # Type
 #import * from 'type/Usuario.graphql'
+#import * from 'type/Auth.graphql'
 
 # Input
 #import * from 'input/Usuario.graphql'
@@ -8,7 +9,6 @@ scalar Date
 # Query
 #import Query from 'query/Usuario.graphql'
 
-
 # Mutation
 #import Mutation from './mutation/Usuario.graphql'
-
+#import * from './mutation/Auth.graphql'
