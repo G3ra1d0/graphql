@@ -1,10 +1,12 @@
 const Usuario = require("../../models/Usuarios");
+const bcrypt = require("bcryptjs");
 
 module.exports = {
   novoUsuario(_, args) {
     return new Usuario({
       nome: args.nome,
       email: args.email,
+      senha: bcrypt.hashSync(args.senha, bcrypt.genSaltSync()),
       idade: args.idade,
       salario: args.salario,
       vip: args.vip,
@@ -29,7 +31,7 @@ module.exports = {
         if (dados.email) doc.email = dados.email;
         if (dados.idade) doc.idade = dados.idade;
         if (dados.salario) doc.salario = dados.salario;
-        if (dados.vip) doc.nome = dados.nome;
+        if (dados.vip) doc.vip = dados.vip;
         return doc.save();
       })
       .catch((err) => null);

@@ -2,6 +2,7 @@ type Mutation {
   novoUsuario(
     nome: String!
     email: String!
+    senha: String!
     idade: Int
     salario: Float
     vip: Boolean
